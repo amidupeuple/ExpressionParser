@@ -1,0 +1,14 @@
+Terminal symbols:
+FIELD_NAME
+LITERAL
+OPEN_BRACKET
+CLOSE_BRACKET
+EQUAL
+LOGICAL_AND_OR
+
+expression -> logical_operand logical_operator
+logical_operator -> LOGICAL_AND_OR logical_operand logical_operator
+logical_operator -> EPSILON
+logical_operand -> FIELD_NAME simple_right_equal_part
+simple_right_equal_part -> EQUAL simple_right_part
+simple_right_part -> LITERAL
